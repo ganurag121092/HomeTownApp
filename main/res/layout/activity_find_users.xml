@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:design="http://schemas.android.com/apk/res-auto"
+    >
+    <TableLayout
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp">
+        <TableRow tools:ignore="UselessParent">
+            <Spinner
+                android:text="@string/select_country"
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/countrylist_spinner"
+                android:layout_marginTop="10dp"
+                />
+            <Spinner
+                android:text="@string/select_state"
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/statelist_spinner"
+                android:layout_marginTop="10dp" />
+
+        </TableRow>
+        <TableRow>
+            <Spinner
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/pagesize_spinner"
+                android:layout_marginTop="10dp"
+                />
+            <Spinner
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/year_spinner"
+
+                android:layout_marginTop="10dp" />
+        </TableRow>
+    </TableLayout>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context="edu.sdsu.anuragg.hometownapp.FindUsersActivity"
+        android:id="@+id/activity_find_users"
+        tools:ignore="UselessLeaf"
+        android:layout_above="@+id/navigation"
+        android:layout_marginTop="80dp">
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/recycler_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+    </FrameLayout>
+
+
+    <android.support.design.widget.BottomNavigationView
+        android:id="@+id/navigation"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="start"
+        design:menu="@menu/bottom_navigation"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        android:background="?android:attr/windowBackground" />
+</RelativeLayout>

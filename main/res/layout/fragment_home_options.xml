@@ -1,0 +1,38 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="edu.sdsu.anuragg.hometownapp.HomeOptionsFragment">
+
+    <!-- TODO: Update blank fragment layout -->
+
+    <TextView
+        android:text="@string/welcome_to_hometown_app"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/homeScreenGreeting"
+
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="120dp" />
+
+    <Button
+        android:text="@string/new_user"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/newUserButton"
+        android:layout_marginStart="63dp"
+        android:layout_centerVertical="true"
+        android:layout_alignParentStart="true"
+        android:onClick="createNewUser"/>
+
+    <Button
+        android:text="@string/find_users"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/findUsersButton"
+        android:layout_marginStart="61dp"
+        android:onClick="findExistingUsers"
+        android:layout_alignBaseline="@+id/newUserButton"
+        android:layout_alignBottom="@+id/newUserButton"
+        android:layout_toEndOf="@+id/newUserButton" />
+</RelativeLayout>
